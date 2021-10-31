@@ -1,0 +1,83 @@
+<!--
+ * Based on Raffael Zica's MessageBoxSlim.Avalonia
+ * 
+ * Copyright (C) 2021  Alexis Justine Ang.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Affero General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="280" d:DesignHeight="120"
+        x:Class="Nerdlabs.Avalonia.Extension.Views.MessageBoxWindow"
+        SizeToContent="WidthAndHeight"
+        MinWidth="{Binding MaxWidth}"
+        MaxWidth="{Binding MaxWidth}"
+        WindowStartupLocation="{Binding Location}"
+        MinHeight="120"
+        CanResize="{Binding IsResizable}"
+        Classes="MessageBox"
+        Title="{Binding Title}">
+    <Window.KeyBindings>
+        <KeyBinding Gesture="Ctrl+C" Command="{Binding CopyToClipboard}" />
+    </Window.KeyBindings>
+    <Design.DataContext>
+
+    </Design.DataContext>
+
+    <Window.Styles>
+        <Style Selector="TextBox">
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+        </Style>
+        <Style Selector="Button">
+            <Setter Property="Margin" Value="15 0 15 0" />
+            <Setter Property="MinHeight" Value="24" />
+            <Setter Property="MinWidth" Value="75" />
+        </Style>
+    </Window.Styles>
+    
+    <Grid Width="{Binding $parent[Window].Bounds.Width}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!--Icon-->
+        <Image Classes="MessageBox" Grid.Row="0" Grid.Column="0" Margin="8" MaxHeight="50" MaxWidth="50" VerticalAlignment="Center"
+               IsVisible="{Binding HasIcon}"
+               Source="{Binding Icon}" />
+        <TextBlock Classes="MessageBox" Grid.Row="0" VerticalAlignment="Center" Margin="20 30 20 30" Grid.Column="1" Text="{Binding Message}" />
+        <!--Buttons-->
+        <StackPanel Orientation="Horizontal"  Margin="4,16,8,16" Grid.Row="1" Grid.ColumnSpan="2"
+                    HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Button Classes="MessageBox" Content="OK" HorizontalContentAlignment="Center" Command="{Binding ButtonClick}"
+                     CommandParameter="{Binding $self.Content}" IsVisible="{Binding OKButton}" />
+            <Button Classes="MessageBox" Content="Yes" HorizontalContentAlignment="Center" Command="{Binding ButtonClick}" CommandParameter="{Binding $self.Content}"
+                     IsVisible="{Binding YesButton}" />
+            <Button Classes="MessageBox" Content="No" HorizontalContentAlignment="Center" Command="{Binding ButtonClick}" CommandParameter="{Binding $self.Content}"
+                     IsVisible="{Binding NoButton}" />
+            <Button Classes="MessageBox" Content="Abort" HorizontalContentAlignment="Center" Command="{Binding ButtonClick}" CommandParameter="{Binding $self.Content}"
+                     IsVisible="{Binding AbortButton}" />
+            <Button Classes="MessageBox" Content="Cancel" HorizontalContentAlignment="Center" Command="{Binding ButtonClick}" CommandParameter="{Binding $self.Content}"
+                    IsVisible="{Binding CancelButton}" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,20 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style Selector="Button.MessageBox /template/ ContentPresenter">
+        <Setter Property="CornerRadius" Value="5" />
+    </Style>
+    <Style Selector="Button.MessageBox">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Background" Value="#77ecedf0" />
+        <Setter Property="BorderBrush" Value="#ff7d7d7d" />
+    </Style>
+    <Style Selector="Button.MessageBox:pointerover /template/ ContentPresenter">
+        <Setter Property="Background" Value="#ffafafaf" />
+    </Style>
+    <Style Selector="TextBox.MessageBox">
+        <Setter Property="Background" Value="#ffd3d3d3" />
+    </Style>
+    <Style Selector="Window.MessageBox">
+        <Setter Property="Background" Value="#ffd3d3d3" />
+    </Style>
+</Styles>
