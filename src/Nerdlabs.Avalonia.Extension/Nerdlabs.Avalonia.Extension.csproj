@@ -6,6 +6,10 @@
     <ApplicationIcon />
     <StartupObject />
     <Authors>Alexis Justine Ang</Authors>
+    <Description>An extension to AvaloniaUI providing custom or additional control(s) to the core project.</Description>
+    <Copyright>Copyright (c) 2021 Alexis Justine Ang</Copyright>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
   <ItemGroup>
     <AvaloniaResource Include="Assets\**" />
