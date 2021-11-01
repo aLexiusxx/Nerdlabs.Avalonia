@@ -24,13 +24,13 @@
         mc:Ignorable="d" d:DesignWidth="420" d:DesignHeight="120"
         x:Class="Nerdlabs.Avalonia.Extension.Views.BorderlessMessageBox"
         SizeToContent="WidthAndHeight"
-        MinWidth="420"
+        MinWidth="{Binding MaxWidth}"
         MaxWidth="{Binding MaxWidth}"
         WindowStartupLocation="{Binding Location}"
         MinHeight="120"
-        CanResize="{Binding IsResizable}"
         Classes="MessageBox"
         Title="{Binding Title}"
+        CanResize="False"
         ExtendClientAreaToDecorationsHint="True"
         ExtendClientAreaChromeHints="NoChrome"
         ExtendClientAreaTitleBarHeightHint="-1">
@@ -49,7 +49,7 @@
             <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
         </Style>
         <Style Selector="Button">
-            <Setter Property="Margin" Value="15 0 15 0" />
+            <Setter Property="Margin" Value="0 0 10 0" />
             <Setter Property="MinHeight" Value="24" />
             <Setter Property="MinWidth" Value="75" />
         </Style>
@@ -65,12 +65,12 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <!--Icon-->
-        <Image Classes="MessageBox" Grid.Row="0" Grid.Column="0" Margin="8" MaxHeight="50" MaxWidth="50" VerticalAlignment="Center"
+        <Image Classes="MessageBox" Grid.Row="0" Grid.Column="0" Margin="20 30 10 30" MaxHeight="50" MaxWidth="50" VerticalAlignment="Center"
                IsVisible="{Binding HasIcon}"
                Source="{Binding Icon}" />
-        <TextBlock Classes="MessageBox" Grid.Row="0" VerticalAlignment="Center" Margin="20 30 20 30" Grid.Column="1" Text="{Binding Message}" />
+        <TextBlock Classes="MessageBox" Grid.Row="0" VerticalAlignment="Center" Margin="10 30 20 30" Grid.Column="1" Text="{Binding Message}" />
         <!--Buttons-->
-        <StackPanel Orientation="Horizontal"  Margin="4,16,8,16" Grid.Row="1" Grid.ColumnSpan="2"
+        <StackPanel Orientation="Horizontal"  Margin="10 0 30 30" Grid.Row="1" Grid.ColumnSpan="2"
                     HorizontalAlignment="Right" VerticalAlignment="Center">
             <Button Classes="MessageBox" Content="OK" HorizontalContentAlignment="Center" Command="{Binding ButtonClick}"
                      CommandParameter="{Binding $self.Content}" IsVisible="{Binding OKButton}" />

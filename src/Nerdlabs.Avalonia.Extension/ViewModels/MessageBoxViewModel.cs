@@ -60,7 +60,6 @@ namespace Nerdlabs.Avalonia.Extension.ViewModels
         public bool CancelButton    => _dtObjOptions.Button.HasFlag(MessageBoxButton.Cancel);
         public bool AbortButton     => _dtObjOptions.Button.HasFlag(MessageBoxButton.Abort);
         public bool NoneButton      => _dtObjOptions.Button.HasFlag(MessageBoxButton.None);
-        public bool IsResizable     => _dtObjOptions.IsResizable;
         public bool HasIcon         => _dtObjOptions.Icon != null;
         public string Title         => _dtObjOptions.Title;
         public string Message       => _dtObjOptions.Message;

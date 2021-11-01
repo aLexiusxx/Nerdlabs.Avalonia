@@ -20,6 +20,7 @@
 using System;
 
 using Avalonia.Controls;
+using Avalonia.Styling;
 using Avalonia.Markup.Xaml.Styling;
 
 namespace Nerdlabs.Avalonia.Extension.Controls
@@ -28,60 +29,60 @@ namespace Nerdlabs.Avalonia.Extension.Controls
     {
         internal static void SetStyle(this Window window, MessageBoxStyle style)
         {
-            global::Avalonia.Styling.Styles styles = window.Styles;
+            Styles styles = window.Styles;
             switch (style)
             {
             case MessageBoxStyle.Windows:
                 {
                     styles
-                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Windows/Windwows.xaml"))
+                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Windows/Windows.axaml"))
                         {
-                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Windows/Windwows.xaml")
+                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Windows/Windows.axaml")
                         });
                     break;
                 }
             case MessageBoxStyle.MacOS:
                 {
                     styles
-                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/MacOS/MacOS.xaml"))
+                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/MacOS/MacOS.axaml"))
                         {
-                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/MacOS/MacOS.xaml")
+                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/MacOS/MacOS.axaml")
                         });
                     break;
                 }
             case MessageBoxStyle.Ubuntu:
                 {
                     styles
-                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Ubuntu/Ubuntu.xaml"))
+                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Ubuntu/Ubuntu.axaml"))
                         {
-                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Ubuntu/Ubuntu.xaml")
+                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Ubuntu/Ubuntu.axaml")
                         });
                     break;
                 }
             case MessageBoxStyle.Mint:
                 {
                     styles
-                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Mint/Mint.xaml"))
+                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Mint/Mint.axaml"))
                         {
-                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Mint/Mint.xaml")
+                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Mint/Mint.axaml")
                         });
                     break;
                 }
             case MessageBoxStyle.RoundedButtons:
                 {
                     styles
-                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/RoundedButtons/RoundedButtons.xaml"))
+                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/RoundedButtons/RoundedButtons.axaml"))
                         {
-                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/RoundedButtons/RoundedButtons.xaml")
+                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/RoundedButtons/RoundedButtons.axaml")
                         });
                     break;
                 }
             case MessageBoxStyle.DarkMode:
                 {
                     styles
-                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/DarkMode/DarkMode.xaml"))
+                        .Add(new StyleInclude(new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Dark/Dark.axaml"))
                         {
-                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/DarkMode/DarkMode.xaml")
+                            Source = new Uri("avares://Nerdlabs.Avalonia.Extension/Styles/Dark/Dark.axaml")
                         });
                     break;
                 }

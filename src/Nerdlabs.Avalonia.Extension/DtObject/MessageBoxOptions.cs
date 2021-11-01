@@ -38,11 +38,6 @@ namespace Nerdlabs.Avalonia.Extension.DtObject
         public MessageBoxStyle Style { get; set; } = MessageBoxStyle.None;
 
         /// <summary>
-        /// Gets or sets the resizable property of the <c>MessageBox</c>.
-        /// </summary>
-        public bool IsResizable { get; set; } = false;
-
-        /// <summary>
         /// Gets or sets the text that appears on the title bar of
         /// <c>MessageBox</c> for bordered windows.
         /// </summary>
