@@ -8,5 +8,7 @@ on [MessageBoxSlim.Avalonia](https://github.com/SirJson/MessageBoxSlim.Avalonia)
 - Centered the text of controls such as buttons.
 - Changed the message containing control from ```TextBox``` to ```TextBlock```
   for a more MessageBox like feel.
+- Message content is now wrap with the containing parent window instead of being
+  chopped off.
 - Added ```BorderlessMessageBox``` for other specific usage and set as the
   default MessageBox style when ```MessageBoxStyle.None``` is used.
