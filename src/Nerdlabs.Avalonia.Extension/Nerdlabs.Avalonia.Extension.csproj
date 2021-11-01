@@ -15,7 +15,7 @@
     <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
     <PackageIcon></PackageIcon>
     <PackageIconUrl />
-    <Version>1.0.1</Version>
+    <Version>1.0.1.1</Version>
     <PackageTags>avalonia, avaloniaui, nerdlabs, mvvm, rx, reactive, extensions, mac, forms, wpf, net, netstandard, net50, uwp, xamarin</PackageTags>
     <PackageReleaseNotes>https://raw.githubusercontent.com/aLexiusxx/Nerdlabs.Avalonia/main/README.md</PackageReleaseNotes>
   </PropertyGroup>
