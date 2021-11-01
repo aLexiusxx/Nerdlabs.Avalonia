@@ -30,7 +30,7 @@ You can find the latest version of this Package on [NuGet](https://www.nuget.org
 
 Include ```using``` statements at the top of your namespace declaration.
 ```csharp
-using Nerdlabs.Avalonia.Extension
+using Nerdlabs.Avalonia.Extension;
 using Nerdlabs.Avalonia.Extension.Controls;
 using Nerdlabs.Avalonia.Extension.DtObject;
 ```
