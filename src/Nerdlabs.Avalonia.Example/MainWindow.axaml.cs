@@ -37,7 +37,7 @@ namespace Nerdlabs.Avalonia.Example
                     Location = WindowStartupLocation.CenterOwner,
                     Icon = BitmapFactory.Load("avares://Nerdlabs.Avalonia.Example/Assets/idea.png"),
                     MaxWidth = 480,
-                    Style = MessageBoxStyle.None
+                    Style = MessageBoxStyle.MacOS
                 })
                 .AsyncShowDialog(this);
         }
