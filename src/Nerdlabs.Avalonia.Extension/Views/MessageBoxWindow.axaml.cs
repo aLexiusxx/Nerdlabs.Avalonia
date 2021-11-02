@@ -26,7 +26,7 @@ using System.Threading.Tasks;
 
 namespace Nerdlabs.Avalonia.Extension.Views
 {
-    public partial class MessageBoxWindow : Window, IMessageBox<UserResult>
+    public partial class MessageBoxWindow : _MessageBox
     {
         public MessageBoxWindow()
         {
@@ -39,27 +39,27 @@ namespace Nerdlabs.Avalonia.Extension.Views
             InitializeComponent();
         }
 
-        public UserResult UserResult { get; set; } = UserResult.None;
-
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);
         }
 
-        public Task<UserResult> AsyncShow()
-        {
-            TaskCompletionSource<UserResult> tcSource = new TaskCompletionSource<UserResult>();
-            Closed += delegate { tcSource.TrySetResult(UserResult); };
-            Show();
-            return tcSource.Task;
-        }
-
-        public Task<UserResult> AsyncShowDialog(Window owner)
-        {
-            TaskCompletionSource<UserResult> tcSource = new TaskCompletionSource<UserResult>();
-            Closed += delegate { tcSource.TrySetResult(UserResult); };
-            ShowDialog(owner);
-            return tcSource.Task;
-        }
+        /*
+         *  public Task<UserResult> AsyncShow()
+         *  {
+         *      TaskCompletionSource<UserResult> tcSource = new TaskCompletionSource<UserResult>();
+         *      Closed += delegate { tcSource.TrySetResult(UserResult); };
+         *      Show();
+         *      return tcSource.Task;
+         *  }
+         *  
+         *  public Task<UserResult> AsyncShowDialog(Window owner)
+         *  {
+         *      TaskCompletionSource<UserResult> tcSource = new TaskCompletionSource<UserResult>();
+         *      Closed += delegate { tcSource.TrySetResult(UserResult); };
+         *      ShowDialog(owner);
+         *      return tcSource.Task;
+         *  }
+         */
     }
 }
