@@ -4,6 +4,9 @@ An extension to AvaloniaUI providing custom or additional control(s)
 to the core project. Currently containing ```MessageBox``` control based
 on [MessageBoxSlim.Avalonia](https://github.com/SirJson/MessageBoxSlim.Avalonia)
 
+[![NuGet](https://img.shields.io/nuget/v/Nerdlabs.Avalonia.Extension)](https://www.nuget.org/packages/Nerdlabs.Avalonia.Extension/)
+[![Coverage Status](https://coveralls.io/repos/github/aLexiusxx/Nerdlabs.Avalonia/badge.svg?branch=dev)](https://coveralls.io/github/aLexiusxx/Nerdlabs.Avalonia?branch=dev)
+
 ### Changelog
 
 ##### 1.0.1
