@@ -13,8 +13,6 @@ You can find the latest version of this Package on:
 or install the package via command line using:
 > dotnet add package Nerdlabs.Avalonia.Extension
 
-[![NuGet](https://img.shields.io/nuget/v/Nerdlabs.Avalonia.Extension)](https://www.nuget.org/packages/Nerdlabs.Avalonia.Extension/)
-[![Coverage Status](https://coveralls.io/repos/github/aLexiusxx/Nerdlabs.Avalonia/badge.svg?branch=dev)](https://coveralls.io/github/aLexiusxx/Nerdlabs.Avalonia?branch=dev)
 
 ### Changelog
 
