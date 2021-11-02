@@ -3,6 +3,15 @@
 An extension to AvaloniaUI providing custom or additional control(s)
 to the core project. Currently containing ```MessageBox``` control based
 on [MessageBoxSlim.Avalonia](https://github.com/SirJson/MessageBoxSlim.Avalonia)
+  
+
+### Installation
+You can find the latest version of this Package on:  
+
+[![NuGet](https://img.shields.io/nuget/v/Nerdlabs.Avalonia.Extension)](https://www.nuget.org/packages/Nerdlabs.Avalonia.Extension/)
+  
+or install the package via command line using:
+> dotnet add package Nerdlabs.Avalonia.Extension
 
 ### Changelog
 
@@ -23,8 +32,6 @@ on [MessageBoxSlim.Avalonia](https://github.com/SirJson/MessageBoxSlim.Avalonia)
 - Added ```BorderlessMessageBox``` for other specific usage and set as the
   default MessageBox style when ```MessageBoxStyle.None``` is used.
 
-### Installation
-You can find the latest version of this Package on [NuGet](https://www.nuget.org/packages/Nerdlabs.Avalonia.Extension/)
 
 ### Example Usage
 
